@@ -1,0 +1,37 @@
+JFDML JFormDesigner: "8.0.3.0.246" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "language"
+	"i18n.bundlePackage": "resources"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp panel1::t:::x}"
+			"$verticalGroup": "par l {comp panel1::t:::x}"
+		} ) {
+			name: "panel"
+			"title": new FormMessage( null, "help" )
+			"preferredSize": new java.awt.Dimension( 1024, 640 )
+			"minimumSize": new java.awt.Dimension( 1024, 640 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {comp scrollPane1::l:::x}"
+				"$verticalGroup": "par l {comp scrollPane1::l::269:x}"
+			} ) {
+				name: "panel1"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JEditorPane" ) {
+						name: "helpPanel"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

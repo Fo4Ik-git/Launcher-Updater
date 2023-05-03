@@ -1,0 +1,85 @@
+JFDML JFormDesigner: "8.0.3.0.246" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "language"
+	"i18n.bundlePackage": "resources"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp mainPanel::l:::x}"
+			"$verticalGroup": "par l {comp mainPanel::l:::x}"
+		} ) {
+			name: "this"
+			"background": sfield java.awt.Color gray
+			"title": "Updater"
+			"foreground": sfield java.awt.Color white
+			"preferredSize": new java.awt.Dimension( 330, 230 )
+			"minimumSize": new java.awt.Dimension( 330, 230 )
+			"maximumSize": new java.awt.Dimension( 330, 230 )
+			"visible": true
+			"resizable": false
+			"autoRequestFocus": false
+			"alwaysOnTop": true
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "thisWindowClosing", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:86:p, par t {comp updateButton:::p:150:p, comp playButton:::p:150:p}, space ::87:x}}"
+				"$verticalGroup": "par l {seq t {space ::23:x, comp updateButton:::p:50:p, space s:::p, comp playButton:::p:50:p, space :p:25:p}}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"requestFocusEnabled": false
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "updateButton"
+					"text": new FormMessage( null, "upgrade" )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "upgradeButtonMouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "playButton"
+					"text": new FormMessage( null, "playButton.text" )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "playButtonMouseClicked", true ) )
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu"
+					"text": new FormMessage( null, "menu" )
+					"background": sfield java.awt.Color lightGray
+					"foreground": new java.awt.Color( 0, 0, 0, 255 )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuSettings"
+						"text": new FormMessage( null, "settings" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuSettings", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuTerminal"
+						"text": new FormMessage( null, "terminal" )
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuTerminal", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuExit"
+						"text": new FormMessage( null, "exit" )
+						"background": sfield java.awt.Color lightGray
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuExit", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "help"
+					"text": new FormMessage( null, "help" )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuHelp"
+						"text": new FormMessage( null, "help" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuHelp", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 10 )
+			"size": new java.awt.Dimension( 325, 230 )
+		} )
+	}
+}

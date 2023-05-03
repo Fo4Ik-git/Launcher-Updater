@@ -1,0 +1,48 @@
+JFDML JFormDesigner: "8.0.3.0.246" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "language"
+	"i18n.bundlePackage": "resources"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp panel1::l:::x}"
+			"$verticalGroup": "par l {comp panel1::l::284:x}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"preferredSize": new java.awt.Dimension( 400, 315 )
+			"minimumSize": new java.awt.Dimension( 400, 315 )
+			"title": new FormMessage( null, "terminal" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq t {space :0:0:x, comp button1:::p::p}, seq l {comp termianlInput:::p:317:p, space :::p, comp sentTextButton::::63:x}, comp scrollPane1::t:::x}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::x, comp scrollPane1:::p:212:p, space s:::p, par l {comp termianlInput::l:p:32:p, comp sentTextButton::l:p:32:p}, space :p:280:p, comp button1:::p::p}}"
+			} ) {
+				name: "panel1"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "terminal"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "termianlInput"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "termianlInputKeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "sentTextButton"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/img/javaVersion.png" )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "sentTextButtonMouseClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 315 )
+		} )
+	}
+}

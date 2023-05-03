@@ -1,0 +1,54 @@
+JFDML JFormDesigner: "8.0.3.0.246" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "language"
+	"i18n.bundlePackage": "resources"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp panel1::t:::x}"
+			"$verticalGroup": "par l {comp panel1::t:::x}"
+		} ) {
+			name: "this"
+			"title": new FormMessage( null, "settings" )
+			"preferredSize": new java.awt.Dimension( 400, 300 )
+			"minimumSize": new java.awt.Dimension( 400, 300 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :p::p, comp label1:::p:89:p, space :p::p, comp textPathToFolder::::195:x, space :::p, comp selectPathToFolder:::p:69:p, space :p:27:p}}"
+				"$verticalGroup": "par l {seq {par l {seq l {space :p:8:p, comp textPathToFolder:::p:28:p}, seq {space :::p, par l {comp label1::b:p:28:p, comp selectPathToFolder::t:p::p}}}, space ::233:x}}"
+			} ) {
+				name: "panel1"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": new FormMessage( null, "pathToFolder" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "textPathToFolder"
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "selectPathToFolder"
+					"text": new FormMessage( null, "select" )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "selectPathToFolderMouseClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 5 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+		add( new FormWindow( "javax.swing.JWindow", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {comp fileChooser:::p:516:p, space :0:0:x}}"
+			"$verticalGroup": "par l {seq l {comp fileChooser:::p:338:p, space :0:2:x}}"
+		} ) {
+			name: "window1"
+			add( new FormComponent( "javax.swing.JFileChooser" ) {
+				name: "fileChooser"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 560, 200 )
+			"size": new java.awt.Dimension( 515, 340 )
+		} )
+	}
+}
