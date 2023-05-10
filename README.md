@@ -9,7 +9,7 @@ Launcher Updater requires the following software to be installed on your system:
 
 ## Installation
 You can download the latest version of the application [here](http://130.61.147.228:9000/api/file/download/2)
-or from releases page.
+or from releases page [here](https://github.com/Fo4Ik-git/Launcher-Updater/releases).
 
 ## Usage
 To start the application, you need to run the `Updater.jar` file.
